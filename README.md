@@ -11,6 +11,8 @@ This project used a significant amount of problem solving, software development 
 For a detailed technical analysis and breakdown of the project, design, findings, and discussion, see the PDF report saved in:
 - documents/Halo_Wars_Simulator_Report.pdf
 
+Originally created March 2024, report created in Nov 2024.
+
 ## Objective
 
 There were several objectives for this project, the main ones being:
