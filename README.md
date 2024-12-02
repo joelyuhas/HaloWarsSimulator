@@ -1,6 +1,6 @@
 # HaloWarsSimulator
 
-Experimental project that used Python to solve the problem of how quickly can a player create a "Scarab" super unit using the rules of the Halo Wars strategy game released in 2009.
+Experimental project that used Python to figure out how quickly can a player can create a "Scarab" super unit using the rules of the 2009 Halo Wars strategy game.
 
 Specifically, in the game Halo Wars, "resoruces" are a currancy the player uses to buy units. The player gets resrouces continuously based on how many buildings of a specific type they have. Since it takes resrouces and time to build buildings, the equation for calculating the fastest way to get to a certain number of resources is complex.
 
