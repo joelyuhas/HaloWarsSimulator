@@ -2,9 +2,9 @@
 
 Experimental project that used Python to solve the problem of how quickly can a player create a "Scarab" super unit using the rules of the Halo Wars strategy game released in 2009.
 
-Specifically, in the game Halo Wars, "resoruces" is a currancy you can use to buy units. The player gets resrouces continuously based on how many buildings of a specific type they have. Since it takes resrouces and time to build buildings, the equation for calculating the fastest way to get to a certain number of resources is complex.
+Specifically, in the game Halo Wars, "resoruces" are a currancy the player uses to buy units. The player gets resrouces continuously based on how many buildings of a specific type they have. Since it takes resrouces and time to build buildings, the equation for calculating the fastest way to get to a certain number of resources is complex.
 
-This project created a simulator that could accurately predict how many resources at a specific point in time a player would have based on the order they created their bases and buildings. A separate program created hundreds of thousands of random build orders that were simulated to find the fastest build order to reach 3000 resources.
+This project created a simulator that could accurately predict how many resources at a specific point in time a player would have based on the order they created their bases and buildings. A separate program created hundreds of thousands of random build orders that were simulated to find the fastest build order to reach the amount of resources it took to build a Scarab.
 
 This project used a significant amount of problem solving, software development techniques, analysis, experimentation, and verification testing against in game experimentation. 
 
