@@ -25,14 +25,14 @@ The following is a very high level overview of the Halo Wars game mechanics and 
 The Scarab is one of the most powerful units in the game Halo Wars. If the player can get one as fast as possible, it can provide them a major advantage. The following are the game mechanics that show the rules this project needed to consider for how to build a Scarab.
 
 
-## Game Mechanics
-### Scarab Requirements
+### Game Mechanics
+#### Scarab Requirements
 To build a Scarab, the player needs the following requirements:
 - 3000 resrouces.
 - a Tech level of 3.
 
 
-### Actions
+#### Actions
 The player has several actions they can do that can help them satisfy the Scarab Requirements:
 - Build/upgrade a base (creates more build slots for supply pads).
 - Build/upgrade a supply pad (adds more resources per second).
@@ -41,16 +41,16 @@ The player has several actions they can do that can help them satisfy the Scarab
 Each mechanic costs a specific amount of resources and takes a certain amount of time to complete. The more supply pads, the greater the supplies generated a second is, but the greater up front cost.
 
 
-### Assumptions
+#### Assumptions
 This project assumed that the player was playing on a specific map which has 4 "Reactors", which are special abilities that let the player get a tech level of 3 after only building a Temple (assuming they can control 2 reactors).
 
-### Economy
+#### Economy
 The player gets resources per second in a non-linear fashion based off the amount of regular supply pads, upgraded supply pads, and total supply pads. The exact equation and breakdown is discussed in the PDF.
 
-## Software Design
+### Software Design
 Two main pieces of software were designed for this project, a program to simulate the Halo Wars in game economy and build times/constraints, and another to generate "Build Orders" to feed into the simulatior.
 
-### Simulator
+#### Simulator
 The simulator used Python to replicate the Halo Wars mechanics as closely as possible. It did this by creating the following classes:
 - Base Class: Controlled building bases and monitoring that bases build times and build slots.
 - Build Slot Class: Controlled the building that was made on a base's build slot, could be Empty, Supply Pad, or Temple.
@@ -59,7 +59,7 @@ The simulator used Python to replicate the Halo Wars mechanics as closely as pos
 
 All of this was wrapped in a SimulatorWrapper that could be easily interfaced with by the other program.
 
-### Generating Build Orders
+#### Generating Build Orders
 The second program (GenerateOrdersBuildingBlocks) also was done in Python and main purpose was to generate random "build orders", or a list of orders that simulator could act on.
 
 At first statistics and combinatorics were attempted to try to get every build order possible, but that was deemed too challenging. Instead, a method was used to generate random build orders, with the idea that even if it didn't find the fastest time, it could help show trends.
@@ -71,7 +71,7 @@ This class followed the overall flow:
 - A redundancy check using a hash map was used to ensure no duplicate build orders were ran.
 
 
-### Combining
+#### Combining
 A combination and executible program (run_build_combinations.py) was made that utilized both programs to create a random build order, simulate the build order, and save the output time it took the order to reach 3000 resources. This combination program would have several constants that could be toggled to change how many random iterations to run, what resource threshold to use, how many starting bases, etc.
 
 
